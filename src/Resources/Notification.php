@@ -10,7 +10,9 @@ class Notification extends FcmResource
     public function __construct(
         public ?string $title = null,
         public ?string $body = null,
-        public ?string $image = null
+        public ?string $image = null,
+        public ?string $color = null,
+        public ?string $sound = null
     ) {
         //
     }
@@ -54,6 +56,8 @@ class Notification extends FcmResource
             'title' => $this->title,
             'body' => $this->body,
             'image' => $this->image,
+            'sound' => $this->sound,
+            'color' => $this->color,
         ]);
     }
 }
